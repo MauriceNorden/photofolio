@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/_head'); %>
+
+    <body>
+        <%- include('partials/_header'); %>
+
+            <div class="main-content">
+                <h1>
+                    <%= title%>
+                </h1>
+                <% data.forEach((image)=> { %>
+                    <form method="post" action="/admin/edit-images">
+                        <div id="" class="image">
+                            <label for="id">Photo ID:</label>
+                            <input disabled="true" type="text" name="id" placeholder="<%= image.id %>""
+                                value=" <%=image.id %>">
+                            <label for="filename">Photo name:</label>
+                            <input type="text" name="filename" placeholder="<%= image.filename %>"
+                                value="<%= image.filename %>">
+
+                            <img src="<%= image.path %>" class="form-image">
+
+                            <label for="month">Month:</label>
+                            <input type="number" name="month" id="<%= image.id %>" placeholder="<%= image.month %>"
+                                value="<%= image.month %>">
+                            <label for="day">Day:</label>
+                            <input type="number" name="day" id="<%= image.id %>" placeholder="<%= image.day %>"
+                                value="<%= image.day %>">
+                            <label for="year">Year:</label>
+                            <input type="number" name="year" id="<%= image.id %>" placeholder="<%= image.year%>"
+                                value="<%= image.year %>">
+                            <input type="submit" value="Save">
+                        </div>
+
+                    </form>
+
+                    <% }); %>
+            </div>
+
+
+
+
+
+
+
+    </body>
+
+</html>

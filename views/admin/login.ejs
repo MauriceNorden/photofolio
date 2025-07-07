@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/_head'); %>
+
+    <body>
+        <%- include('partials/_error'); %>
+            <div class="login-div">
+                <h1>
+                    <%= title%>
+                </h1>
+                <form method="post" action="/admin/login">
+                    <input type="text" name="username" placeholder="Username" />
+                    <input type="password" name="password" placeholder="Password" />
+                    <input type="submit" value="Login" />
+                </form>
+            </div>
+    </body>
+    <%- include('partials/_footer'); %>
+
+</html>

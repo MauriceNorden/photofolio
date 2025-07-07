@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/_head'); %>
+
+    <body>
+
+        <div class="login-div">
+            <h1>
+                <%= title%>
+            </h1>
+            <form method="post" action="/admin/register">
+                <input type="text" name="firstname" placeholder="Firstname">
+                <input type="text" name="lastname" placeholder="Lastname">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </body>
+    <%- include('partials/_footer'); %>
+
+</html>

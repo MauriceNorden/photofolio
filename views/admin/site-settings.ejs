@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/_head'); %>
+
+    <body>
+        <%- include('partials/_header'); %>
+
+            <div class="main-content">
+                <h1>
+                    <%= title%>
+                </h1>
+                <form action="/admin/site-settings" method="POST" class="admin-form-single">
+
+                    <label for="theme">Site name:</label>
+                    <input type="text" placeholder="<%= data.name%>" name="name">
+
+                    <label for="theme">Theme:</label>
+                    <select name="theme" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <input type="submit" value="Save">
+                </form>
+            </div>
+
+
+
+
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "photofolio",
+  "version": "1.0.0",
+  "description": "Simple web CRM for your photo portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodaemon start index.js"
+  },
+  "author": "Maurice Norden",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^12.1.1",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.6.0",
+    "ejs": "^3.1.10",
+    "exif-parser": "^0.1.12",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "sharp": "^0.34.2"
+  }
+}

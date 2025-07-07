@@ -1,0 +1,34 @@
+<div class="sidebar">
+
+    <a href="/admin/">Home</a>
+    <div class="dropdown">
+        <a href="#">Images ▼</a>
+        <div class="dropdown-content">
+            <a href="/admin/add-images">Add Images</a>
+            <a href="/admin/edit-images">Edit Images</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Collages ▼</a>
+        <div class="dropdown-content">
+            <a href="/admin/add-collages">Add Collages</a>
+            <a href="/admin/edit-collages">Edit Collages</a>
+        </div>
+    </div>
+    <% if (data.isadmin===1) { %>
+        <div class=" dropdown">
+            <a href="#">Users ▼</a>
+            <div class="dropdown-content">
+                <a href="/admin/add-users">Add Users</a>
+                <a href="/admin/edit-users">Edit Users</a>
+
+            </div>
+        </div>
+        <a href="/admin/site-settings">Site Settings</a>
+        <% } %>
+
+
+            <a href="/admin/about">About</a>
+            <a href="/admin/logout">Logout</a>
+</div>

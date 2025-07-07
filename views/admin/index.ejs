@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/_head'); %>
+
+    <body>
+        <%- include('partials/_header'); %>
+
+            <div class="main-content">
+                <p>
+                    Welcome: <b>
+                        <%= data.username %>
+                    </b>
+                    <br>
+                    <% if (data.isadmin===1) { %>
+                        <br>
+                        You are <b>administrator<b></b>
+                            <% } %>
+                </p>
+            </div>
+
+
+
+
+            <%# This is a comment; it will not be included in the final output %>
+
+
+
+    </body>
+
+</html>

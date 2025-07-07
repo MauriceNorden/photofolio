@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/_head'); %>
+
+    <body>
+        <%- include('partials/_header'); %>
+
+            <div class="main-content">
+                <h1>
+                    Welcome: <b>
+                        <%= data.username %>
+                    </b>
+                </h1>
+
+                <p>
+                    This webapplication has been developed by mn<b>Devs</b>.
+                    <br>
+                    A.K.A Maurice Norden
+                    <br>
+                    Learn more at <a href="https://mndevs.host">mn<b>Devs.host</b></a>.
+                </p>
+            </div>
+            <%- include('partials/_footer'); %>
+    </body>
+
+</html>

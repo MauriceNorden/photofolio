@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/_head'); %>
+
+    <body>
+        <%- include('partials/_header'); %>
+
+            <div class="main-content">
+                <form method="post" action="/admin/register">
+                    <input type="text" name="firstname" placeholder="Firstname">
+                    <input type="text" name="lastname" placeholder="Lastname">
+                    <input type="text" name="username" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
+                    <label for="isadmin">Does this user need admin rights?</label>
+                    <select name="isadmin">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+
+
+
+
+            <%# This is a comment; it will not be included in the final output %>
+
+
+
+    </body>
+
+</html>

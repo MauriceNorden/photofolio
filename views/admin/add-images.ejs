@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/_head'); %>
+    <style>
+
+    </style>
+
+    <body>
+        <%- include('partials/_header'); %>
+
+            <div class="main-content">
+                <h1>
+                    <%= title%>
+                </h1>
+                <form id="upload-form" action="/admin/add-images" method="POST" enctype="multipart/form-data">
+                    <div id="uploadBox" class="upload-container">
+                        Click here, or drag your photo's to upload them
+                        <input type="file" name="photos" id="photo" accept="image/*" multiple required>
+                    </div>
+                    <div id="preview-container"></div>
+                    <input type="submit" value="Upload">
+                </form>
+            </div>
+
+            <script>
+                const photoInput = document.getElementById('photo');
+                const previewContainer = document.getElementById('preview-container');
+                const uploadBox = document.getElementById('uploadBox');
+
+                // Laat bestanden zien in preview
+                function showPreview(files) {
+                    previewContainer.innerHTML = '';
+                    Array.from(files).forEach(file => {
+                        if (!file.type.startsWith('image/')) return;
+                        const img = document.createElement('img');
+                        img.src = URL.createObjectURL(file);
+                        previewContainer.appendChild(img);
+                    });
+                }
+
+                // Klik op container opent file input
+                uploadBox.addEventListener('click', () => {
+                    photoInput.click();
+                });
+
+                // Normale input change
+                photoInput.addEventListener('change', () => {
+                    showPreview(photoInput.files);
+                });
+
+                // Drag & drop ondersteuning
+                uploadBox.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    uploadBox.classList.add('dragover');
+                });
+
+                uploadBox.addEventListener('dragleave', () => {
+                    uploadBox.classList.remove('dragover');
+                });
+
+                uploadBox.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    uploadBox.classList.remove('dragover');
+                    const files = e.dataTransfer.files;
+                    photoInput.files = files;
+                    showPreview(files);
+                });
+            </script>
+    </body>
+
+</html>

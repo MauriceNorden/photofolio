@@ -1,0 +1,8 @@
+<div class="footer">
+    <p id="copyright"></p>
+</div>
+
+<script>
+    const d = new Date();
+    document.getElementById("copyright").innerHTML = `&copy; ${d.getFullYear()} <%= title%>`;
+</script>

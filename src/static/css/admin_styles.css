@@ -1,0 +1,226 @@
+:root {
+    --text: #FBFBFF;
+    --primary: #2D3142;
+    --secondary: #6C969D;
+    --accent: #F2F6D0;
+    --red: #DB162F;
+    --green: #95C623;
+    --spacing: 12px 20px;
+    --padding: 15px;
+    --margin: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--accent);
+}
+
+/*login/register form styling*/
+
+.login-div {
+    position: relative;
+    margin: 0 auto;
+    width: 75vh;
+    background-color: var(--primary);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 20px;
+
+}
+
+.login-div h1 {
+    color: var(--text);
+    text-align: center;
+    float: left;
+}
+
+/*main div*/
+.main-content {
+    margin-left: 150px;
+    padding: 20px;
+}
+
+.main-content h1 {
+    text-align: center;
+}
+
+/*navigation IS FIXED!!!!!*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: var(--primary);
+    padding-top: 20px;
+}
+
+.sidebar a,
+.dropdown a {
+    padding: var(--padding);
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.sidebar a:hover,
+.dropdown a:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: var(--secondary);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*error div*/
+.error-div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--red);
+    z-index: 1;
+    color: var(--text);
+    padding: 12px 30px;
+}
+
+/*image upload form*/
+.upload-container {
+    border: 2px dashed var(--primary);
+    padding: var(--padding);
+    text-align: center;
+    color: var(--text);
+    background-color: var(--secondary);
+    cursor: pointer;
+
+}
+
+#photo {
+    display: none;
+}
+
+#preview-container {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--primary);
+    justify-content: center;
+}
+
+#preview-container img {
+    min-width: 150px;
+    margin: 10px;
+    width: calc(25% - 20px);
+    height: auto;
+
+}
+
+
+
+
+
+
+/* images*/
+.image-div {
+    padding: 20px;
+    margin: 20px 10px;
+    background-color: var(--primary);
+    display: flex;
+}
+
+.image-div img {
+    width: calc(100% - 20px);
+    margin: 10px;
+}
+
+.image-div input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0px;
+    margin: 10px;
+    color: var(--text);
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+
+
+/*footer */
+.footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+.footer p {
+    text-align: center;
+}
+
+
+
+/* form templates*/
+
+
+
+/*FORMS FIXED*/
+form {
+    background-color: var(--primary);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+form input[type="text"],
+input[type="number"],
+input[type="submit"],
+input[type="password"],
+select {
+    background-color: var(--accent);
+    color: var(--primary);
+    padding: var(--padding);
+    margin: var(--margin);
+    box-sizing: border-box;
+    width: calc(100% - var(--padding));
+    border: none;
+}
+
+
+form input[type="submit"] {
+    background: var(--secondary);
+    color: var(--text);
+    padding: var(--padding);
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+
+
+
+
+form label {
+    color: var(--text);
+    padding: 10px;
+}
+
+
+
+.form-image {
+    width: calc(100% - var(--padding));
+
+    padding: var(--padding);
+}
